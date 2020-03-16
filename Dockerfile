@@ -17,4 +17,5 @@ RUN export PATH=$PATH:/usr/local/go/bin && \
     git clone -b $(curl -L https://grpc.io/release) https://github.com/grpc/grpc && \
     cd grpc && \
     git submodule update --init && \
-    mkdir -p cmake/build && cd cmake/build && cmake ../.. && make -j$(nproc) && make install && make clean && ldconfig
+    mkdir -p cmake/build && cd cmake/build && cmake ../.. && make -j$(nproc) && make install && make clean && ldconfig && \
+    rm -rf /grpc
