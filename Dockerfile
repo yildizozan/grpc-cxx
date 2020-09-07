@@ -2,7 +2,7 @@ FROM debian
 
 
 RUN apt-get update && apt-get install -y \
-    build-essential autoconf libtool pkg-config \
+    build-essential autoconf libtool pkg-config libssl-dev \
     git curl make cmake g++ \
     && apt-get clean
 
